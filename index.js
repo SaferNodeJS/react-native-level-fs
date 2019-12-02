@@ -1,6 +1,6 @@
-var leveldown = require('asyncstorage-down');
-var levelup = require('levelup');
-var fs = require('level-filesystem');
+const leveldown = require('asyncstorage-down');
+const levelup = require('levelup');
+const fs = require('level-filesystem');
 
-var db = levelup('level-fs', { db: leveldown });
+const db = levelup('level-fs', { db: leveldown });
 module.exports = fs(db);
